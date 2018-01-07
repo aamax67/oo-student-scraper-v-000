@@ -13,7 +13,9 @@ class Scraper
 
     index_url.css(".student-name").each do |student|
       student_name = student.css(".student-name").text
-      students << {name: student_name}
+      student_location = student.css(".student_location").text
+      student_profile_link = ".fixtures/student-site/#{student.attr('href')}"
+      students << {name: student_name, location: student_location, profile_url: student_profile_link }
     end
     students
   end
