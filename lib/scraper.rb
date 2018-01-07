@@ -12,7 +12,7 @@ class Scraper
     index_url.css(".student-name").first.css("h4").text
 
   end
-
+binding.pry
   def self.scrape_profile_page(profile_url)
 
   end
