@@ -8,11 +8,11 @@ class Scraper
   def self.scrape_index_page(index_url)
 
     index_url = Nokogiri::HTML(open("./fixtures/student-site/index.html"))
-
+binding.pry
     index_url.css(".student-name").first.css("h4").text
 
   end
-binding.pry
+
   def self.scrape_profile_page(profile_url)
 
   end
