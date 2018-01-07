@@ -8,7 +8,7 @@ class Scraper
 
     index_url = Nokogiri::HTML(open("./fixtures/student-site/index.html"))
 
-    index_url.css(".student-name").text
+    index_url.css(".student-name").first.css("h4")
 
   end
 
