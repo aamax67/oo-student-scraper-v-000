@@ -7,7 +7,8 @@ class Scraper
 
   def self.scrape_index_page(index_url)
 
-    index_url = Nokogiri::HTML(open(index_url))
+    index_url = Nokogiri::HTML(open('./fixtures/student-site/index.ht
+ml'))
 
     students = []
 
