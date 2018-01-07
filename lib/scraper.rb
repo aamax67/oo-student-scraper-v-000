@@ -2,9 +2,9 @@ require 'nokogiri'
 require 'open-uri'
 
 
-index_url = Nokogiri::HTML(open("./fixtures/student-site/index.html"))
-
 class Scraper
+
+    index_url = Nokogiri::HTML(open("./fixtures/student-site/index.html"))
 
   def self.scrape_index_page(index_url)
 
