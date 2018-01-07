@@ -15,7 +15,7 @@ class Scraper
         card.css(".student-card a").each do |student|
       student_name = student.css(".student-name").text
       student_location = student.css(".student-location").text
-      student_profile_link = "./fixtures/student-site/#{student.attr('href')}"
+      student_profile_link = "../fixtures/student-site/#{student.attr('href')}"
       students << {name: student_name, location: student_location, profile_url: student_profile_link}
       end
     end
